@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethenic</title>
+    <STYLE>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'roboto', sans-serif;
+    }
+    
+    .navbar{
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #f5f5f5;
+        z-index: 9;
+    }
+    
+    .nav{
+        padding: 10px 10vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .brand-logo{
+        height: 60px;
+    }
+    
+    .nav-items{
+        display: flex;
+        align-items: center;
+    }
+    
+    .search{
+        width: 500px;
+        display: flex;
+    }
+    
+    .search-box{
+        width: 80%;
+        height: 40px;
+        padding: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border: 1px solid #d1d1d1;
+        text-transform: capitalize;
+        background: none;
+        color: #a9a9a9;
+        outline: none;
+    }
+    
+    .search-btn{
+        width: 20%;
+        height: 40px;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: #383838;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 15px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .search-box::placeholder{
+        color: #a9a9a9;
+    }
+    
+    .nav-items a{
+        margin-left: 20px;
+    }
+    
+    .nav-items a img{
+        width: 30px;
+    }
+    .links-container{
+        width: 100%;
+        display: flex;
+        padding: 10px 10vw;
+        justify-content: center;
+        list-style: none;
+        border-top: 1px solid #9d9d9d;
+    }
+    
+    .link{
+        text-transform: capitalize;
+        padding: 0 10px;
+        margin: 0 5px;
+        text-decoration: none;
+        color: #000000;
+        opacity: 0.5;
+        transition: .5s;
+    }
+    
+    .link:hover{
+        opacity: 1;
+    }
+    .hero-section{
+        width: 100%;
+        height: calc(100vh - 120px);
+        background-image: url('./img/ethban.png');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hero-section .logo{
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+    
+    .hero-section .sub-heading{
+        margin-top: 10px;
+        text-align: center;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 35px;
+        font-weight: 300;
+    }
+    /* Product Section */
+.product-category {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    margin: 40px 0;
+    text-transform: capitalize;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 10vw;
+}
+
+/* Product Card Styles */
+.product-card {
+    background-color: #fff;
+    width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+}
+
+.product-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-thumb {
+    transform: scale(1.1);
+}
+
+.discount-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff5252;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-brand {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-short-des {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+    height: 40px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    display: block;
+    margin-bottom: 10px;
+}
+.footer-title, .info{
+    color: rgba(255, 255, 255, 0.75);
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.footer-title{
+    /* margin-top: 50px; */
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+
+.footer-social-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-link{
+    color: #fff;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.social-link:nth-child(1){
+    margin-left: 0;
+}
+
+.footer-credit{
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+ }
+footer{ 
+    position: relative;
+    width: 100%;
+    padding: 20px 10vw;
+    padding-bottom: 80px;
+    background: #383838;
+}
+.add-to-cart-btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(63, 198, 213);
+    color: white;
+    font-weight: bold;
+}
+.add-to-cart-btn:hover{
+    color: rgb(63, 198, 213);
+    background-color: white;
+    border: 2px solid rgb(63, 198, 213);
+}
+    </STYLE>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <img src="./img/logo1.png" class="brand-logo" alt="">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="search brand, product">
+                    <button class="search-btn">search</button>
+                    
+                </div>
+                <a href="account.html"><img src="./img/prof.png" alt=""></a>
+                <a href="cart.html"><img src="./img/cart.jpg" alt=""></a>
+            </div>
+        </div>
+    </nav>
+    <ul class="links-container">
+        <li class="link-item"><a href="LOVELY  MEN.html" class="link">Home</a></li>
+        <li class="link-item"><a href="Casual.html" class="link">Casuals</a></li>
+        <li class="link-item"><a href="Ethinic.html" class="link">Ethenic</a></li>
+        <li class="link-item"><a href="Formals.html" class="link">Formals</a></li>
+        <li class="link-item"><a href="Trending.html" class="link">Trending</a></li>
+    </ul>
+    <header class="hero-section">
+        <div class="content">
+            <img src="./img/logotrans.png" class="logo" alt="">
+            <p class="sub-heading">best fashion collection of all time</p>
+        </div>
+    </header>
+        <!-- Product Section -->
+        <section class="product">
+            <h2 class="product-category">Ethinic Collection</h2>
+        </section>
+    
+        <div class="product-container" id="product-list">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">30% off</span>
+                    <img src="./img/eth1.webp" class="product-thumb" alt="Casual Shirt">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Royal Ethenic Jacket</h2>
+                    <p class="product-short-des">Slim Fit Nehru Jacket</p>
+                    <span class="price">₹2999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Shirt', 1200)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth2.webp" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Rich Silk Jacket</h2>
+                    <p class="product-short-des">Comfort Fir Nehru Jacket</p>
+                    <span class="price">₹4999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth3.jpg" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Silk Kurta</h2>
+                    <p class="product-short-des">Pure Silk Everyday Kurta</p>
+                    <span class="price">₹1999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth4.jpg" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Cool Shervani Jacket </h2>
+                    <p class="product-short-des">Silk and Velvet Shervani</p>
+                    <span class="price">₹6999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth5.webp" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Elegant Shervani Set</h2>
+                    <p class="product-short-des">Full Silk Shervani</p>
+                    <span class="price">₹9999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth6.jpeg" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Trendy Dhoti-Shervani</h2>
+                    <p class="product-short-des">Traditional Shervani</p>
+                    <span class="price">₹4999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth7.webp" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Silk Shervani</h2>
+                    <p class="product-short-des">Handwork Shervani</p>
+                    <span class="price">₹12999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth8.webp" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">festive Kurta</h2>
+                    <p class="product-short-des">Comfortable Cotton Kurta</p>
+                    <span class="price">₹1499</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth9.jpg" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Exclusive Shervani Jacket</h2>
+                    <p class="product-short-des">Pure Silk Handwork Shervani Jacket</p>
+                    <span class="price">₹17999</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">40% off</span>
+                    <img src="./img/eth10.avif" class="product-thumb" alt="Casual Jeans">
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">Plain Kurta</h2>
+                    <p class="product-short-des">Cotton-Nylon Kurta</p>
+                    <span class="price">₹1199</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Casual Jeans', 2000)">Add to Cart</button>
+                </div>
+            </div>
+    
+            
+            
+            <!-- Additional products can go here -->
+        </div>
+    
+        <!-- Footer -->
+        <footer>
+    
+            <div>
+                <p class="footer-title">about company</p>
+                <p class="info">Lovely Men Clothing, founded in 2023, offers modern and stylish apparel for men, blending comfort and quality in every piece. From formal wear to trendy styles, our collections are designed to empower men with confidence and individuality. We are committed to delivering timeless fashion with a contemporary edge, perfect for any occasion.</p>
+                <p class="info">support emails - lovelymenpvtltd@gmail.com, lovelymenSupport@gmail.com</p>
+                <p class="info">telephone - 180-6985651, 180-6985652</p>
+                <div class="footer-social-container">
+                    <div>
+                        <a href="#" class="social-link">terms & services</a>
+                        <a href="#" class="social-link">privacy page</a>
+                    </div>
+                    <div>
+                        <a href="#" class="social-link"><img src=".//img/instagram-icon_1057-2227.avif" height="50px" width="50px"></a>
+                        <a href="#" class="social-link"><img src=".//img/facebook.png" height="50px" width="50px"></a>
+                        <a href="#" class="social-link"><img src=".//img/twitter.webp" height="50px" width="50px"></a>
+                    </div>
+                </div>
+                <p class="footer-credit">&copy; Lovely Men Clothing: Because every man deserves to look and feel his best.</p>
+            </div>
+    </footer>
+    
+        <script src="app.js"></script>
+</body>
+</html>
